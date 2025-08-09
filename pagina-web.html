@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Primera Compañía de Bomberos de Santiago - Bomba Chile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #d32f2f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #b71c1c;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #7f0000;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #d32f2f;
+      border-bottom: 2px solid #d32f2f;
+      padding-bottom: 6px;
+    }
+    footer {
+      background-color: #b71c1c;
+      color: white;
+      text-align: center;
+      padding: 12px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+    form button {
+      margin-top: 15px;
+      background-color: #d32f2f;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form button:hover {
+      background-color: #7f0000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Primera Compañía de Bomberos de Santiago - Bomba Chile</h1>
+  </header>
+  <nav>
+    <a href="#introduccion">Introducción</a>
+    <a href="#oficialidad">Oficialidad</a>
+    <a href="#informacion">Información</a>
+    <a href="#especialidad">Especialidad</a>
+    <a href="#postulacion">Postulación</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <main>
+    <section id="introduccion">
+      <h2>Introducción</h2>
+      <p>La Primera Compañía de Bomberos de Santiago, conocida como “Bomba Chile”, es una institución histórica dedicada a la protección y servicio de la comunidad santiaguina. Fundada hace más de un siglo, contamos con un equipo comprometido y capacitado para enfrentar emergencias y desastres.</p>
+    </section>
+
+    <section id="oficialidad">
+      <h2>Oficialidad</h2>
+      <ul>
+        <li>Comandante: Juan Pérez</li>
+        <li>Subcomandante: María González</li>
+        <li>Jefe de Operaciones: Carlos Rodríguez</li>
+        <li>Jefa de Logística: Ana Martínez</li>
+      </ul>
+    </section>
+
+    <section id="informacion">
+      <h2>Información</h2>
+      <p>Nuestra compañía está equipada con vehículos de última tecnología, estaciones estratégicamente ubicadas y una capacitación constante para brindar una respuesta rápida y eficiente ante cualquier emergencia.</p>
+      <p>Horarios de atención: Lunes a Domingo, 24 horas.</p>
+      <p>Dirección: Calle Falsa 123, Santiago, Chile.</p>
+    </section>
+
+    <section id="especialidad">
+      <h2>Especialidad</h2>
+      <ul>
+        <li>Rescate Urbano y Vehicular</li>
+        <li>Control y Extinción de Incendios</li>
+        <li>Atención Prehospitalaria</li>
+        <li>Prevención y Educación Comunitaria</li>
+      </ul>
+    </section>
+
+    <section id="postulacion">
+      <h2>Postulación</h2>
+      <p>Si estás interesado en formar parte de nuestra compañía, completa el formulario a continuación:</p>
+      <form id="formPostulacion" onsubmit="return enviarPostulacion(event)">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="18" max="60" required />
+
+        <label for="experiencia">Experiencia previa (opcional):</label>
+        <textarea id="experiencia" name="experiencia" rows="4" placeholder="Describe tu experiencia"></textarea>
+
+        <label for="especialidadPostulacion">Área de especialidad:</label>
+        <select id="especialidadPostulacion" name="especialidadPostulacion" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="rescate">Rescate Urbano</option>
+          <option value="incendios">Control de Incendios</option>
+          <option value="prehospitalaria">Atención Prehospitalaria</option>
+          <option value="educacion">Educación Comunitaria</option>
+        </select>
+
+        <button type="submit">Enviar Postulación</button>
+      </form>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Para cualquier consulta o emergencia, comunícate con nosotros:</p>
+      <ul>
+        <li>Teléfono: +56 2 2345 6789</li>
+        <li>Email: contacto@bombachile.cl</li>
+        <li>Dirección: Calle Falsa 123, Santiago, Chile</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Primera Compañía de Bomberos de Santiago - Bomba Chile. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    function enviarPostulacion(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      alert('Gracias, ' + nombre + ', por postularte a la Primera Compañía de Bomberos de Santiago.');
+      // Aquí podrías agregar lógica para enviar el formulario a un servidor si quieres.
+      event.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
